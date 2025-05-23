@@ -1,0 +1,76 @@
+
+% entornos.tex
+% ------------------------------------
+% Definición de colores personalizados
+\definecolor{DarkBlue}{RGB}{0, 50, 100}
+\definecolor{DarkRed}{RGB}{150, 0, 0}
+\definecolor{DarkGreen}{RGB}{0, 100, 0}
+\definecolor{LightYellow}{RGB}{255, 255, 200}
+
+% Configuración de titlesec
+\titleformat{\section}
+  {\Large\bfseries\sffamily}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\large\bfseries\sffamily}
+  {\thesubsection}{1em}{}
+
+
+% Carga de tcolorbox libraries
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+
+% Ejercicio estándar (azul)
+\newtcolorbox{ejercicio}[1][]{
+  colback=LightYellow!5,
+  colframe=DarkBlue!80!black,
+  title=Ejercicio,
+  fonttitle=\sffamily\bfseries,
+  sharp corners,
+  boxrule=0.8pt,
+  left=8pt,
+  right=8pt,
+  top=4pt,
+  bottom=4pt,
+  enhanced,
+  attach boxed title to top left={xshift=5mm, yshift=-2mm},
+  boxed title style={colback=DarkBlue!80!black},
+  #1
+}
+
+% Ejercicio importante (rojo)
+\newtcolorbox{ejercicioimportante}[1][]{
+  colback=LightYellow!5,
+  colframe=DarkRed!80!black,
+  title=Ejercicio Importante,
+  fonttitle=\sffamily\bfseries,
+  sharp corners,
+  boxrule=0.8pt,
+  left=8pt,
+  right=8pt,
+  top=4pt,
+  bottom=4pt,
+  enhanced,
+  attach boxed title to top left={xshift=5mm, yshift=-2mm},
+  boxed title style={colback=DarkRed!80!black},
+  #1
+}
+
+% Tarea (verde)
+\newtcolorbox{tarea}[1][]{
+  colback=LightYellow!5,
+  colframe=DarkGreen!80!black,
+  title=Tarea,
+  fonttitle=\sffamily\bfseries,
+  sharp corners,
+  boxrule=0.8pt,
+  left=8pt,
+  right=8pt,
+  top=4pt,
+  bottom=4pt,
+  enhanced,
+  attach boxed title to top left={xshift=5mm, yshift=-2mm},
+  boxed title style={colback=DarkGreen!80!black},
+  #1
+}
